@@ -1,0 +1,36 @@
+---
+name: Scalar-String
+version: 0.000
+author:
+  - 'Andrew Main (Zefram) <zefram@fysh.org>'
+abstract: string aspects of scalars
+license: perl
+resources:
+  license: ~
+requires:
+  Carp: 0
+  Exporter: 0
+  bytes: 0
+  if: 0
+  perl: 5.006
+  strict: 0
+  utf8: 0
+  warnings: 0
+build_requires:
+  Module::Build: 0
+  Test::More: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+recommends:
+  XSLoader: 0
+dynamic_config: 1
+provides:
+  Scalar::String:
+    file: lib/Scalar/String.pm
+    version: 0.000
+generated_by: Module::Build version 0.31012
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
+distribution_type: module
