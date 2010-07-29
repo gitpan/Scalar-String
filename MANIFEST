@@ -11,6 +11,7 @@ lib/Scalar/String.xs
 t/grade.t
 t/grade_pp.t
 t/pod_cvg.t
+t/pod_cvg_pp.t
 t/pod_syn.t
 t/setup_pp.pl
 SIGNATURE    Added here by Module::Build

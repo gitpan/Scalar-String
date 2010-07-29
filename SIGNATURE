@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.55.
+signed via the Module::Signature module, version 0.64.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,25 +14,26 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 b9cd58d655c5a3be5afea489693de1c552e5c121 .cvsignore
-SHA1 6bac6cb17478948e5adf1a378e8330df9ca75a75 Build.PL
-SHA1 d909d5b32a724160d9b83320fc9480c47134993e Changes
-SHA1 3f24f271d9105fa257dc0ac9773fa57361d0f758 MANIFEST
-SHA1 5c1c0afbc22a47fd9fdb2618b03da4cc2619220d META.yml
-SHA1 684ab827ae5405876abe203f5a032ffa6b575cf7 Makefile.PL
-SHA1 0cd2fd8904b7ff2cba07611af5540c3499dc2478 README
+SHA1 b96cd131fbf5526aa54457b5d0f51f8561c6962b .cvsignore
+SHA1 69644b6e77995e79f0ca7a6813a6ea8115adba30 Build.PL
+SHA1 f5ecc7bd84f5fd4803b28c6ac612f296adb280d4 Changes
+SHA1 7a1ba06fdfa4df47fedcf721214ef884905db6d8 MANIFEST
+SHA1 d72601742d5d4a533a7c550bd20173f7ee036e6c META.yml
+SHA1 0f1b3b6269550b5135e10b3cae1b6b41d274b276 Makefile.PL
+SHA1 226420051128bf02b8a2cc3669d45b09c108a362 README
 SHA1 c185a100351b2eb6d840b8ff2ce73c96d154f6a6 lib/Scalar/.cvsignore
-SHA1 9ee6d64702351d9bc817512a76e4a665d7081b66 lib/Scalar/String.pm
-SHA1 3733dbf8563677e245f0cc0d99ed01c80a81b6bd lib/Scalar/String.xs
+SHA1 4497dae28705d76e296cd555780c265589626a95 lib/Scalar/String.pm
+SHA1 1a90ca842ca222db2ef68fa4ae00fecb7905086a lib/Scalar/String.xs
 SHA1 f36c5928277d92e38d3eb240221dfcfcc6d51cce t/grade.t
 SHA1 438cb548ab97eede0c7f70604f2a33ac4990af10 t/grade_pp.t
-SHA1 0e141eecf3ca4903ef38d9413b5403a9ddb0392f t/pod_cvg.t
-SHA1 74a957cd8b93f25672ecc6aa578a671d084dd343 t/pod_syn.t
+SHA1 904d9a4f76525e2303e4b0c168c68230f223c8de t/pod_cvg.t
+SHA1 3f447b1d0b8a6247c3a311087f8d66da1c3ca5db t/pod_cvg_pp.t
+SHA1 65c75abdef6f01a5d1588a307f2ddfe2333dc961 t/pod_syn.t
 SHA1 3794f0f035dbf2532d7cdd8ab52c8dd3188425ad t/setup_pp.pl
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAkm7qxcACgkQOV9mt2VyAVEuewCfcVd6heZuhHMhjnCLw8OoUBfb
-K+kAnikkG7ccO/xXdlsyEK4g+gxkzX+h
-=hBlS
+iEYEARECAAYFAkxR76kACgkQOV9mt2VyAVEFvACeOTV4o9Xdr8xpVD8sNzikzEoe
+IXcAoKmkcUNWLP7EJBsrKV1uZ/6ELlzT
+=y0YE
 -----END PGP SIGNATURE-----

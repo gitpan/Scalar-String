@@ -94,12 +94,13 @@ way round, as an octet sequence plus encoding flag.
 
 package Scalar::String;
 
+{ use 5.006; }
 use warnings;
 use strict;
 
-our $VERSION = "0.000";
+our $VERSION = "0.001";
 
-use base "Exporter";
+use parent "Exporter";
 our @EXPORT_OK = qw(
 	sclstr_is_upgraded sclstr_is_downgraded
 	sclstr_upgrade_inplace sclstr_upgraded
@@ -130,14 +131,14 @@ if($@ eq "") {
 __DATA__
 
 use Carp qw(croak);
-BEGIN { require utf8 if $] >= 5.008; }
+BEGIN { require utf8 if "$]" >= 5.008; }
 
 =head1 FUNCTIONS
 
 Each "sclstr_" function takes one or more scalar string arguments to
 operate on.  These arguments must be strings; giving non-string arguments
 will cause mayhem.  See L<Params::Classify/is_string> for a way to
-check for numericness.  Only the string value of the scalar is used;
+check for stringness.  Only the string value of the scalar is used;
 the numeric value is completely ignored, so dualvars are not a problem.
 
 =head2 Classification
@@ -195,7 +196,7 @@ L</sclstr_upgraded>.
 
 sub sclstr_upgrade_inplace($);
 
-if($] >= 5.008) {
+if("$]" >= 5.008) {
 	*sclstr_upgrade_inplace = sub($) { &utf8::upgrade };
 } else {
 	# In perl 5.6, upgrade of a string can be forced by
@@ -233,7 +234,7 @@ L</sclstr_downgraded>.
 
 sub sclstr_downgrade_inplace($;$);
 
-if($] >= 5.008) {
+if("$]" >= 5.008) {
 	*sclstr_downgrade_inplace = sub($;$) {
 		utf8::downgrade($_[0], $_[1] || 0);
 	};
@@ -246,10 +247,10 @@ if($] >= 5.008) {
 	*sclstr_downgrade_inplace = sub($;$) {
 		return unless sclstr_is_upgraded($_[0]);
 		my ($down) = do {
-			use if $] < 5.008, "bytes";
+			use if "$]" < 5.008, "bytes";
 			$_[0] =~ /\A[\x00-\x7f\x80-\xbf\xc2\xc3]*\z/;
 		} ? do {
-			use if $] < 5.008, "utf8";
+			use if "$]" < 5.008, "utf8";
 			($_[0] =~ /\A([\x00-\xff]*)\z/);
 		} : (undef);
 		if(defined $down) {
@@ -290,7 +291,7 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2009 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2009, 2010 Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 
