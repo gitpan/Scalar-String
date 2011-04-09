@@ -5,6 +5,8 @@
 
 MODULE = Scalar::String PACKAGE = Scalar::String
 
+PROTOTYPES: DISABLE
+
 bool
 sclstr_is_upgraded(SV *value)
 PROTOTYPE: $

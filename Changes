@@ -1,3 +1,17 @@
+version 0.002; 2011-04-09
+
+  * in XS, declare "PROTOTYPES: DISABLE" to prevent automatic generation
+    of unintended prototypes
+
+  * in t/setup_pp.pl, avoid a warning that occurs if XSLoader::load()
+    is given no arguments, which is now a valid usage
+
+  * typo fix in documentation
+
+  * include META.json in distribution
+
+  * add MYMETA.json to .cvsignore
+
 version 0.001; 2010-07-29
 
   * in documentation, correct the word "numericness" to "stringness"

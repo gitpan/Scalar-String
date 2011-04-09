@@ -72,7 +72,7 @@ examining the encoding flag.  Such code gives inconsistent behaviour for
 the same character sequence represented in the different ways.  In perl
 5.6, many pure Perl operations (such as regular expression matching)
 also work this way, though some of them can be induced to work correctly
-by using the L<utf8> pragma.  If perl 5.8, regular expression matching
+by using the L<utf8> pragma.  In perl 5.8, regular expression matching
 is character-based by default, but many I/O functions (such as C<open>)
 are still octet-based.
 
@@ -98,7 +98,7 @@ package Scalar::String;
 use warnings;
 use strict;
 
-our $VERSION = "0.001";
+our $VERSION = "0.002";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(
@@ -291,7 +291,7 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2009, 2010 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2009, 2010, 2011 Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 
